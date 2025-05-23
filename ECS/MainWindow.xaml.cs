@@ -21,10 +21,14 @@ namespace ECS
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+        private ObservableCollection<Contact> contacts = new ObservableCollection<Contact>();
         public MainWindow()
         {
             InitializeComponent();
+        }
+        private void LoadSampleData()
+        {
+            EmergencyListLb.ItemsSource = contacts;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -43,7 +47,9 @@ namespace ECS
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-
+            var addContact = new AddContact();
+            addContact.Show();
         }
+        
     }
 }
