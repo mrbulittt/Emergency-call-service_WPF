@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ECS"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="1000" Background="#006400">
+        Title="Emergency Call Service" Icon="/Images/360_F_410411853_uxXc2116hkXjXRCT52Oj4FcFITBY5Sbq.ico" Height="600" Width="1000" Background="#006400">
     <Grid RenderTransformOrigin="0.499,0.497">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="231*"/>

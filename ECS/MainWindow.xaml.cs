@@ -29,7 +29,7 @@ namespace ECS
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var mess = MessageBox.Show("Ваш сигнал о спасении и координаты переданы службе 112! Ожидайте и сохраняйте спокойствие");
+            var mess = MessageBox.Show("Ваш сигнал о спасении и координаты переданы службе 112! Ожидайте и сохраняйте спокойствие", "Сигнал о спасении принят");
         }
 
         private void FirstItem_Selected(object sender, RoutedEventArgs e)
