@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,29 @@ namespace ECS
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var mess = MessageBox.Show("Ваш сигнал о спасении и координаты переданы службе 112! Ожидайте и сохраняйте спокойствие");
+        }
+
+        private void FirstItem_Selected(object sender, RoutedEventArgs e)
+        {
+           
+        }
+        private void SecondItem_Selected(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
