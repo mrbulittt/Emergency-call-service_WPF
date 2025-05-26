@@ -20,17 +20,19 @@ namespace ECS
     /// </summary>
     public partial class AddContact : Window
     {
-        public delegate void ContactAddedEventHandler(Contact сontact);
-        public event ContactAddedEventHandler ContactAdded;
+        public event EventHandler<Contactis> ContactAdded;
+
         public AddContact()
         {
             InitializeComponent();
         }
+
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
             string name = NameContTextBox.Text.Trim();
             string numberText = NumberTextBox.Text.Trim();
-            string comment = CommentTextBox.Text.Trim();
+            string notes = CommentTextBox.Text.Trim();          
+            string familyStatus = FAMContComboBox.Text.Trim();  
 
             if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(numberText))
             {
@@ -38,20 +40,21 @@ namespace ECS
                 return;
             }
 
-            if (!int.TryParse(numberText, out int phoneNumber))
+            if (!long.TryParse(numberText, out long phoneNumber))
             {
                 MessageBox.Show("Введите корректный номер телефона.");
                 return;
             }
 
-            var newContact = new Contact
+            var newContact = new Contactis
             {
                 Name = name,
                 PhoneNumber = phoneNumber,
-                Comment = comment
+                FamilyStatus = familyStatus,
+                Notes = notes
             };
 
-            ContactAdded?.Invoke(newContact);
+            ContactAdded?.Invoke(this, newContact);
             this.Close();
         }
     }

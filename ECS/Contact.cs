@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 
 namespace ECS
 {
-    public class Contact
+    public class Contactis
     {
         public string Name { get; set; }
-        public int PhoneNumber { get; set; }
-        public string Comment { get; set; }
+        public long PhoneNumber { get; set; }
+        public string FamilyStatus { get; set; }  // Семейное положение
+        public string Notes { get; set; }
+        public string CommentDisplay =>
+        $"{(string.IsNullOrWhiteSpace(FamilyStatus) ? "" : $"Семейное положение: {FamilyStatus}")}"
+        +
+        $"{(string.IsNullOrWhiteSpace(Notes) ? "" : $"\nПримечание: {Notes}")}";
     }
 }
