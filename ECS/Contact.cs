@@ -13,7 +13,7 @@ namespace ECS
         public string FamilyStatus { get; set; }  // Семейное положение
         public string Notes { get; set; }
         public string CommentDisplay =>
-        $"{(string.IsNullOrWhiteSpace(FamilyStatus) ? "" : $"Семейное положение: {FamilyStatus}")}"
+        $"{(string.IsNullOrWhiteSpace(FamilyStatus) ? "" : $"Взаимоотнешения: {FamilyStatus}")}"
         +
         $"{(string.IsNullOrWhiteSpace(Notes) ? "" : $"\nПримечание: {Notes}")}";
     }
