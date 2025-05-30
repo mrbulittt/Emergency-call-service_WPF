@@ -68,8 +68,8 @@ namespace ECS
         }
         private void LoadSampleData()
         {
-            var cont1 = new Contactis { Name = "Гарри Поттер", PhoneNumber = 89961241816, FamilyStatus = "Друг", Notes = "Чаще всего доступен и лучше звонить ему в первую очередь"};
-            var cont2 = new Contactis { Name = "Преступление и наказание", PhoneNumber = 89961241816, FamilyStatus = "Друг", Notes="" };
+            var cont1 = new Contactis { Name = "Ильнар", PhoneNumber = 89083390403, FamilyStatus = "Друг", Notes = "Чаще всего доступен и лучше звонить ему в первую очередь"};
+            var cont2 = new Contactis { Name = "Артур", PhoneNumber = 89196959739, FamilyStatus = "Друг", Notes="" };
 
             
             
