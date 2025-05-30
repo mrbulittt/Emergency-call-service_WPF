@@ -68,8 +68,8 @@ namespace ECS
         }
         private void LoadSampleData()
         {
-            var cont1 = new Contactis { Name = "Ильнар", PhoneNumber = 89083390403, FamilyStatus = "Друг", Notes = "Чаще всего доступен и лучше звонить ему в первую очередь"};
-            var cont2 = new Contactis { Name = "Артур", PhoneNumber = 89196959739, FamilyStatus = "Друг", Notes="" };
+            var cont1 = new Contactis { Name = "Ильнар", PhoneNumber = 89083390403, Status = "Друг", Notes = ""};
+            var cont2 = new Contactis { Name = "Артур", PhoneNumber = 89196959739, Status = "Друг", Notes="" };
 
             
             
@@ -129,7 +129,7 @@ namespace ECS
             {
                 string message = $"Имя: {selectedContact.Name}\n" +
                                  $"Номер телефона: {selectedContact.PhoneNumber}\n" +
-                                 $"Взаимоотношение: {selectedContact.FamilyStatus}\n" +
+                                 $"Взаимоотношение: {selectedContact.Status}\n" +
                                  $"Примечание: {selectedContact.Notes}";
 
                 MessageBox.Show(message, "Дополнительная информация");

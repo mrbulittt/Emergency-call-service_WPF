@@ -32,7 +32,7 @@ namespace ECS
             string name = NameContTextBox.Text.Trim();
             string numberText = NumberTextBox.Text.Trim();
             string notes = CommentTextBox.Text.Trim();          
-            string familyStatus = FAMContComboBox.Text.Trim();  
+            string status = FAMContComboBox.Text.Trim();  
 
             if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(numberText))
             {
@@ -50,7 +50,7 @@ namespace ECS
             {
                 Name = name,
                 PhoneNumber = phoneNumber,
-                FamilyStatus = familyStatus,
+                Status = status,
                 Notes = notes
             };
 

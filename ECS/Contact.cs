@@ -10,10 +10,10 @@ namespace ECS
     {
         public string Name { get; set; }
         public long PhoneNumber { get; set; }
-        public string FamilyStatus { get; set; }  // Семейное положение
+        public string Status { get; set; }  // Семейное положение
         public string Notes { get; set; }
         public string CommentDisplay =>
-        $"{(string.IsNullOrWhiteSpace(FamilyStatus) ? "" : $"Взаимоотнешения: {FamilyStatus}")}"
+        $"{(string.IsNullOrWhiteSpace(Status) ? "" : $"Взаимоотнешения: {Status}")}"
         +
         $"{(string.IsNullOrWhiteSpace(Notes) ? "" : $"\nПримечание: {Notes}")}";
     }
